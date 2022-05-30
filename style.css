@@ -1,0 +1,739 @@
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;700&display=swap');
+.portfolio-section {
+    width: 100%;
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
+   
+    
+}
+/* #portfolio-spacer {
+  background-color: rgb(149, 42, 47);
+  color: white;
+} */
+
+.imagegridctn {
+
+    /* border: 1px solid red; */
+
+    width: 60%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    padding-bottom: 100px;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+      top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  
+    background-color: #262626;
+  }
+  
+  .container:hover .overlay {
+    opacity: 90%;
+  }
+  
+  .text {
+    color: white;
+    position: absolute;
+    width:90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .overlay .text h4 {
+  
+    font-size: 1.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+  .overlay .text p {
+    font-size: 1em;
+    margin-top: 0;
+   padding-bottom: 20px;
+  }
+
+  iframe {
+    /* border: 1px red solid; */
+    width: 100%;
+    height: 100vh;
+    border: 0;
+  
+  }
+  
+
+
+
+
+  /* this is the over lay section */
+
+  #coverToad,
+  #coverMoomin,
+  #coverStarbucks,
+  #coverReact,
+  #coverTopTrumps,
+  #coverWeather,
+  #coverWilsons,
+  #coverRead,
+  #coverHitchmans {
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+
+    /* this sets the layer to above the screen */
+    z-index:5; 
+
+    width:100vw;
+    height:100vh;
+    display:none;
+  }
+
+  /* iframe{
+    width: 500px;
+    width: 600px;
+   
+    zoom: 80%;
+    padding: 0px 20px;
+    transform: scale(0.90);
+    /* -o-transform: scale(0.30);
+    -moz-transform: scale(0.75); */
+    /* -webkit-transform-origin: 0 0; */
+    /* display: flex;
+    vertical-align: center;
+    
+  }
+
+  iframe .src {
+    width: 70vw;
+
+  } */ 
+
+
+
+
+  #workScreenToad,
+  #workScreenMoomin,
+  #workScreenStarbucks,
+  #workScreenReact,
+  #workScreenTopTrumps,
+  #workScreenWeather,
+  #workScreenWilsons,
+  #workScreenRead,
+  #workScreenHitchmans {
+    height:auto;
+    width:60%;
+    /* margin:0 auto; */
+    margin:0;
+    position:absolute;
+    top: 30px;
+    left: 20vw;
+    z-index:10;
+    display:none;
+    /* background: url(login.png) no-repeat; */
+    border:3px solid #cccccc;
+    border-radius:10px;
+    background-color: #ffffff;
+  }
+
+ 
+
+  #img-scroll{
+    height: 700px;
+    overflow-y:scroll;
+  }
+
+
+  #workScreenToad:target, #workScreenToad:target + #coverToad,
+  #workScreenMoomin:target, #workScreenMoomin:target + #coverMoomin,
+  #workScreenStarbucks:target, #workScreenStarbucks:target + #coverStarbucks,
+  #workScreenReact:target, #workScreenReact:target + #coverReact,
+  #workScreenTopTrumps:target, #workScreenTopTrumps:target + #coverTopTrumps,
+  #workScreenWeather:target, #workScreenWeather:target + #coverWeather,
+  #workScreenWilsons:target, #workScreenWilsons:target + #coverWilsons,
+  #workScreenRead:target, #workScreenRead:target + #coverRead,
+  #workScreenHitchmans:target, #workScreenHitchmans:target + #coverHitchmans {
+    display:block;
+    opacity:2;
+  }
+
+  
+
+
+  .cancel
+  {
+    display:block;
+    position:absolute;
+    top:3px;
+    right:2px;
+    background:rgb(245,245,245);
+    color:black;
+    height:30px;
+    width:35px;
+    font-size:30px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+  }
+
+
+  .project {
+    text-align: center;
+    color: black;
+  }
+
+ 
+
+
+
+
+
+
+  /* ------- ----------- */
+
+
+
+
+ /* GENERAL STYLING */
+ 
+ •{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ 
+ 
+ }
+ 
+  body,
+ section,
+ main {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     font-family: 'Open Sans', sans-serif;
+     box-sizing: border-box;
+ }
+ 
+ 
+ 
+ /* ---------------------------------------------------------------------------- */
+ 
+ /*  NAVIGATION STYLING  */
+ 
+ /* PARENT */
+ .nav  {
+     /* background-color: #f3a7a7; */
+     background-color: #ffffff; 
+     height: 80px;
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     z-index: 5;
+ }
+ 
+ 
+ /* CHILD RIGHT HAND SIDE*/
+ .nav .nav-inner-ctn {
+     width: 90vw;
+     /* border: 1px solid black; */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ 
+ }
+ 
+ .list-ctn .list{
+     list-style: none;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 600;
+     display: flex;
+ }
+ 
+ .list-ctn .list li{
+     padding: 0 20px;
+ }
+
+ .list-ctn .list a{
+  text-decoration: none;
+  color: black;
+}
+
+ .list-ctn .list li:hover{
+     color: rgb(152, 51, 51);
+     transform:scale(1.2);
+     cursor: pointer;
+ }
+ 
+ .list-ctn .list li :visited{
+     color: white;
+
+ 
+ }
+
+ .menu-wrap {display: none;}
+
+ .hamburger {
+   width: 30px;
+   height: 30px;
+   margin:0;
+   padding:0;
+   display: none;
+   right: 12px;
+   z-index: 14;
+ }
+
+ .menu-wrap .slider-bg {
+  background-color: rgb(22, 22, 22);
+  width: 150vw;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 13; 
+  height: 54vh;
+  opacity: 0;
+}
+
+ 
+
+ /* child left hand side of nav */
+
+ /* .mav-logo-ctn img {
+width: 60px;
+padding-top: 5px;
+ } */
+ 
+ /* ---------------------------------------------------------------------------- */
+ 
+ /* THIS IS THE ABOVE FOLD HEADER SECTION */
+ 
+  .header {
+     /* border: 1px solid red;  */
+    
+     background-color: #F6F6F6;
+     /* height: 70vh;  */
+     padding-top: 12vh;
+     padding-bottom: 4vh;
+     width: 100vw;
+ 
+     display:flex;
+     /* flex: 1;
+     justify-self: center; */
+ 
+     justify-content: center;
+     align-items: center;
+ 
+ }
+ 
+ 
+ /* PARENT */
+ .header-ctn {
+ 
+     padding-top: 5vh;
+     padding-bottom: 5vh;
+ 
+     /* border: solid red 1px; */
+     width: 90vw;
+     /* height: 40vh; */
+ 
+     display: flex;
+     justify-content: center;
+     flex: 1;
+ 
+ 
+ }
+ 
+ /* CHILD ONE */
+  .header-text-ctn{
+     /* border: solid rgb(0, 0, 255) 1px; */
+     /* margin-left: 3%; */
+     max-width:650px;
+     padding-right: 70px;
+     padding-left: 20px;
+ 
+    display: flex;
+    flex-direction: column;
+ 
+ }
+ 
+ .header .header-text-ctn h1{
+ 
+     font-size: 3.5em;
+     font-weight: 900;
+     font-family: 'Merriweather', serif;
+     margin: 0;
+ }
+ 
+ 
+ .header .header-text-ctn h4 {
+     font-size: 1.25em;
+     font-weight: 200;
+     font-family: 'Open Sans', sans-serif;
+ 
+ 
+     margin-bottom: 5px;
+     margin-top: 4px;
+ }
+ 
+ /* CHILD TWO */
+ .header-img {
+      /* border: solid red 1px; */
+     margin: 0;
+     padding: 0;
+ }
+ 
+ /* HEADER LEARN MORE BUTTOM STYLING */
+ 
+ .header-btn {
+     background-color:black;
+     color: #ffffff;
+     padding: 12px 30px;
+     border-radius: 5px;
+     width: 120px;
+ 
+ 
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 600;
+     text-align: center;
+ 
+ }
+
+ 
+ 
+ 
+ 
+ /* --------------------------- THIS IS THE ABOUT SECTION -------------------------- */
+ 
+ .about {
+     /* border: 1px solid red;  */
+    
+     width: 100vw;
+     display:flex;
+   
+     justify-content: center;
+     align-items: center;
+ 
+     padding: 80px 0;
+ 
+ }
+ 
+ .about-ctn{
+      /* border: 1px solid red;   */
+     font-family: 'Open Sans', sans-serif;
+ 
+     display: flex;
+ 
+     align-items: flex-start;
+     max-width: 1550px;
+     margin-left:20px;
+     margin-right: 80px;
+ 
+ }
+ 
+ .about .about-ctn h3 {
+     /* border: 1px solid red;   */
+ 
+     font-size: 1.3em;
+     font-weight: 600;
+     /* font-family: 'Open Sans', sans-serif; */
+     text-align: right;
+     color:black;
+ 
+ 
+     margin-right: 80px;
+ 
+     margin-top: 0;
+     width: 10%;
+ 
+ 
+ 
+ 
+ }
+ 
+ .about .about-ctn p {
+     /* border: 1px solid red;  */
+ 
+     font-size: 1.25em;
+     font-weight: 200;
+     margin-top: 0;
+     font-family: 'Open Sans', sans-serif;
+     text-align: left;
+ 
+     padding-right: 50px;
+ 
+     width: 90%;
+ }
+ 
+ 
+ 
+ /* --------------------------- THIS IS THE SECOND SKILLS SECTION -------------------------- */
+ 
+ 
+ 
+ 
+ .mySkills {
+ 
+     /* border: 1px solid red;  */
+
+   
+ 
+     background-color: #F6F6F6;
+     width: 100vw;
+     color: black;
+ 
+ 
+     display: flex;
+     justify-content: center;
+     align-content: center;
+ 
+     padding: 20px 0px;
+      padding-left: 20px;
+ }
+ 
+ .mySkills-ctn {
+ 
+     /* border: 1px solid white; */
+ 
+     min-width: 60%;
+ 
+     display: flex;
+     justify-content: flex-start;
+     align-content: center;
+ 
+     margin-bottom: 0;
+     /* max-height: 200px; */
+ }
+ 
+ 
+ .webDev,
+ .ux,
+ .design {
+ 
+     display: flex;
+     max-width: 263px;
+     align-items: flex-start;
+     padding-right: 80px;
+ }
+ 
+ .webDev p,
+ .ux p,
+ .design p {
+      margin-bottom: 0;
+      font-size: 1em;
+      font-weight: 400;
+      margin-top: 0;
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+      color: black;
+ 
+ }
+
+
+
+ .p2 {
+ visibility: hidden;
+}
+
+ 
+ /* .webDev {
+     border: 1px solid blue;
+ 
+ } */
+ 
+ 
+ 
+  #webDevIcon{
+ 
+      width: 70px;
+      margin-right: 20px;
+      filter:invert(0);
+ 
+ 
+ 
+  }
+ 
+ 
+  #uxIcon,
+  #designIcon {
+ 
+      width: 60px;
+      margin-right: 20px;
+      filter:invert(0);
+  }
+ 
+  #webDevIcon:hover,
+  #uxIcon:hover,
+  #designIcon:hover {
+  transform:scale(1.2);
+  }
+ 
+ 
+  .mySkills-inner-text-ctn h3{
+ 
+      text-align: left;
+      margin: 0;
+      padding:0;
+      line-height: 1.3em;
+      color:black;
+ 
+  }
+ 
+  /* .mySkills-inner-text-ctn ul li {
+      list-style: disc;
+ 
+  } */
+ 
+  .skillsHeading {
+      /* border: 1px solid white; */
+ 
+     text-align: right;
+     margin: 0;
+     padding-right: 128px;
+ 
+  }
+
+
+
+
+
+
+  
+
+  /* this is the footer section */
+
+/* footer { */
+  /* border: 1px solid red;  */
+
+  /* background-color: #cccccc;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;} */
+ 
+
+ 
+
+
+
+/* #footer{ */
+
+  /* border: 1px solid white; */
+
+/*  
+  margin: 0;
+
+  width: 90vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+
+}
+
+#footer .footer-social-icons{
+
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 0;
+}  */
+
+.footer-social-icons .behance {
+  width: 50px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 0;
+  filter: invert(0);
+}
+
+.footer-social-icons .linkedin {
+  width: 40px;
+  padding: 10px;
+  padding-bottom: 0;
+  filter: invert(0);
+}
+
+.footer-social-icons .github {
+  width: 40px;
+  padding: 10px;
+  padding-bottom: 0;
+  /* filter: invert(0); */
+}
+
+/* #footer .copyRight { */
+  /* border: 1px solid white; */
+  /* color: white;
+  margin: 0;
+
+} */ 
+
+
+/* lets work together section */
+
+.letsWorkTogether {
+  /* border: 1px solid red;  */
+  background-color: #363636;
+  width: 100vw;
+ /* padding-bottom: 80px; */
+ padding-top: 20px;
+  text-align:  center;
+  padding-bottom: 50px;
+}
+
+.letsWorkTogether h2{
+  font-size: 2em;
+  color:white;
+  font-family:'Merriweather', serif;
+  font-weight: 600;
+}
+
+
+.letsWorkTogether p{
+  font-size: 1.2em;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+
+
+}
+
+
+
+
