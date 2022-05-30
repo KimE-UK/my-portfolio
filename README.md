@@ -1,4 +1,4 @@
-# portfolio-site
+# my-portfolio
 portfolio site
 portfolio site created as part of BathSpa University Web Developer Boot Camp 2022
 
