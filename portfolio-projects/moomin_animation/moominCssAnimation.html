@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moominCssAnimation.css">
+</head>
+<body>
+    <a onclick="play()">
+        <audio id="audio" src="./moomin-resources/smack-it-soundroll-main-version-02-21-1708.mp3"  loop="loop"></audio>
+
+    <div class="character">
+        <img id="character_spritesheet" src="./moomin-resources/spriteNew.png" alt="sprite-image">
+    </div>
+    </a>
+
+    <script>
+
+        function play() {
+            let audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    
+</body>
+</html>
